@@ -24,7 +24,7 @@ def main():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://images.unsplash.com/photo-1614851099511-773084f6911d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+             background-image: url("https://cdn.analyticsvidhya.com/wp-content/uploads/2021/04/25317plane.jpg");
              background-attachment: fixed;
              background-size: cover;
          }}
