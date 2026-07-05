@@ -4,8 +4,18 @@ import pickle
 import streamlit as st
 from datetime import datetime, timedelta
 import base64
+import gdown
 
-model = pickle.load(open('flight_prediction.pkl', 'rb'))
+MODEL_PATH = "flight_prediction.pkl"
+
+if not os.path.exists(MODEL_PATH):
+    gdown.download(
+        "https://drive.google.com/uc?id=1qRqUvML76I9RhW56-c4VEsk_Kw1Mp2dW",
+        MODEL_PATH,
+        quiet=False
+    )
+
+model = pickle.load(open(MODEL_PATH, "rb"))
 
 def flight_prediction(input_data):
 
@@ -24,7 +34,7 @@ def main():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://cdn.analyticsvidhya.com/wp-content/uploads/2021/04/25317plane.jpg");
+             background-image: url("https://images.unsplash.com/photo-1614851099511-773084f6911d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
              background-attachment: fixed;
              background-size: cover;
          }}
