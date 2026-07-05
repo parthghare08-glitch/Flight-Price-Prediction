@@ -16,7 +16,7 @@ if not os.path.exists(MODEL_PATH):
         quiet=False
     )
 
-model = pickle.load(open(MODEL_PATH, "rb"))
+model = joblib.load(MODEL_PATH)
 
 def flight_prediction(input_data):
 
