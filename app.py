@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import pandas as pd
-import pickle
+import joblib
 import streamlit as st
 from datetime import datetime, timedelta
 import base64
